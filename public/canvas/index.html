@@ -1,19 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet"
+          href="style.css" />
+    <link rel="stylesheet"
+          href="../styles.css" />
     <meta charset="UTF-8">
     <!-- title appears as window title or tab -->
     <title>Canvas</title>
 </head>
 <body>
-    <h1>Welcome to Canvas</h1>
+    <h1 class="bg-color-red">Welcome to Canvas</h1>
+    <div class="table">
+        <div class="row">
+            <div class="bg-color-red col-50-pc">
+                Left
+            </div>
+            <div class="bg-color-blue col-50-pc">
+                Right
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="bg-color-red col-33-pc">
+                Menu
+            </div>
+            <div class="bg-color-blue col-66-pc">
+                Main
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col bg-yellow w-33-pc">
+                Row 1
+                Col 1
+            </div>
+            <div class="col bg-color-blue w-33-pc">
+                Row 1
+                Col 2
+            </div>
+            <div class="col bg-color-red w-33-pc">
+                Row 1
+                Col 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col w-33-pc">
+                Row 2
+                Col 1
+            </div>
+            <div class="col w-33-pc">
+                Row 2
+                Col 2
+            </div>
+            <div class="col w-33-pc">
+                Row 2
+                Col 3
+            </div>
+        </div>
+
+        <!--Canvas table without frame-->
+        <div class="row">
+            <div class="col-2 bg-yellow">
+                <ul>
+                    <li>Northeastern</li>
+                    <li>
+                        <a href="account.html">
+                            Account
+                        </a>
+                    </li>
+                    <li>Dashboard</li>
+                    <li>Courses</li>
+                    <li>Calendar</li>
+                    <li>Inbox</li>
+                    <li>History</li>
+                    <li>Studio</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+            <div class="col-2 bg-color-blue">
+                <ul>
+                    <li>Home</li>
+                    <li>Modules</li>
+                    <li>Piazza</li>
+                    <li>Zoom Meetings</li>
+                    <li>Assignments</li>
+                    <li>Quizzes</li>
+                    <li>
+                        <a href="gradebook.html">Grades</a>
+                    </li>
+                    <li>People</li>
+                    <li>Panopto Video</li>
+                </ul>
+            </div>
+            <div class="col-6 bg-color-red">
+                <ul>
+                    <li>
+                        <h2>Resources</h2>
+                        <ul>
+                            <li><a href="syllabus.html">Syllabus</a></li>
+                            <li>Piazza</li>
+                            <li>Project</li>
+                            <li>Github</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Textbook</h2>
+                    </li>
+                    <li>
+                        <h2>Office Hours</h2>
+                    </li>
+                    <li>
+                        <h2>Week 1</h2>
+                    </li>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Node</li>
+                        <li>React</li>
+                        <li>Netlify</li>
+                    </ul>
+                    <li>
+                        <h2>Week 2</h2>
+                    </li>
+                    <li>
+                        <h2>Week 3</h2>
+                    </li>
+                    <li>
+                        <h2>Week 4</h2>
+                    </li>
+                    <li>
+                        <h2>Week 5</h2>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 bg-color-green">
+                Right Sidebar
+            </div>
+        </div>
+    </div>
+
+    <!--Canvas table with frame-->
     <table border="1" width="100%">
         <tbody>
         <tr>
-            <td valign="top" width="15%">
+            <td class="bg-yellow" valign="top" width="15%">
                 <div>
                     <h2>Canvas Navigator</h2>
-                    <ol>
+                    <ul>
                         <li>Northeastern</li>
                         <li>
                             <a href="account.html">
@@ -27,7 +160,7 @@
                         <li>History</li>
                         <li>Studio</li>
                         <li>Help</li>
-                    </ol>
+                    </ul>
                 </div>
             </td>
             <td valign="top" width="15%">
@@ -50,83 +183,49 @@
             </td>
             <td valign="top">
                 <div>
-                    <h2>Course Navigator</h2>
                     <ul>
-                        <li>Home</li>
-                        <li>Modules</li>
-                        <li>Piazza</li>
-                        <li>Zoom Meetings</li>
-                        <li>Assignments</li>
-                        <li>Quizzes</li>
                         <li>
-                            <a href="gradebook.html">Grades</a>
+                            <h2>Resources</h2>
+                            <ul>
+                                <li><a href="syllabus.html">Syllabus</a></li>
+                                <li>Piazza</li>
+                                <li>Project</li>
+                                <li>Github</li>
+                            </ul>
                         </li>
-                        <li>People</li>
-                        <li>Panopto Video</li>
-                    </ul>
+                        <li>
+                            <h2>Textbook</h2>
+                        </li>
+                        <li>
+                            <h2>Office Hours</h2>
+                        </li>
+                        <li>
+                            <h2>Week 1</h2>
+                        </li>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>Node</li>
+                            <li>React</li>
+                            <li>Netlify</li>
+                        </ul>
+                        <li>
+                            <h2>Week 2</h2>
+                        </li>
+                        <li>
+                            <h2>Week 3</h2>
+                        </li>
+                    <li>
+                        <h2>Week 4</h2>
+                    </li>
+                    <li>
+                        <h2>Week 5</h2>
+                    </li>
+                </ul>
                 </div>
             </td>
         </tr>
         </tbody>
     </table>
-
-
-    <div>
-        <h2>Canvas Navigator</h2>
-        <ol>
-            <li>Northeastern</li>
-            <li>Account</li>
-            <li>Dashboard</li>
-            <li>Courses</li>
-            <li>Calendar</li>
-            <li>Inbox</li>
-            <li>History</li>
-            <li>Studio</li>
-            <li>Help</li>
-        </ol>
-    </div>
-    <div>
-        <h2>Course Navigator</h2>
-        <ul>
-            <li>Home</li>
-            <li>Modules</li>
-            <li>Piazza</li>
-            <li>Zoom Meetings</li>
-            <li>Assignments</li>
-            <li>Quizzes</li>
-            <li>
-                <a href="gradebook.html">Grades</a>
-            </li>
-            <li>People</li>
-            <li>Panopto Video</li>
-        </ul>
-    </div>
-    <div>
-        <h2>Modules</h2>
-        <ul>
-            <li>
-                <h3>Resources</h3>
-            <ul>
-            <li>
-                <a href="syllabus.html">Syllabus</a>
-            </li>
-            <li>Piazza</li>
-            <li>Final Project</li>
-            <li>Github</li>
-            </ul>
-            </li>
-        </ul>
-        <ul>
-            <li><h3>Required Textbook</h3></li>
-        </ul>
-        <ul>
-            <li><h3>Office Hours</h3></li>
-        </ul>
-        <ul>
-            <li><h3>Week 1</h3></li>
-        </ul>
-    </div>
-
 
 </body>
 </html>
