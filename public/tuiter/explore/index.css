@@ -1,0 +1,173 @@
+input::placeholder {
+    color: lightgrey;
+}
+
+#input-text {
+    position: absolute;
+    padding-left: 60px;
+}
+
+.wd-bg-search {
+    background-color: darkgray;
+}
+
+.wd-round-corner-background-darkgray {
+    border: none;
+    border-radius: 40px;
+    border-block-color: darkgray;
+    width: 70%;
+}
+
+.wd-search-pic {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
+
+.wd-gear-pic {
+    position: absolute;
+    right: 12px;
+    top: 25px;
+    padding-right: 10px;
+}
+
+.wd-search-text {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+}
+
+.wd-row {
+    clear: both;
+}
+
+.wd-col {
+    float: left;
+}
+
+.wd-padding-right20-top60 {
+    padding-right: 20px;
+    padding-top: 60px;
+}
+
+.wd-padding-left20-top45 {
+    padding-left: 30px;
+    padding-top: 45px;
+}
+
+
+.wd-highlighted-link {
+    color: rgb(29, 161, 242);
+    border-bottom: 3px solid;
+    padding-bottom: 10px;
+}
+
+.wd-link-color {
+    color: rgb(110, 118, 125);
+    font-size: 15px;
+    padding: 16px;
+}
+
+.wd-line {
+    height: 16px;
+    border-top: 1px solid rgb(197, 197, 197);
+}
+
+.wd-line-padding {
+    padding-left: 20px;
+}
+
+.wd-topic-text {
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+}
+
+.wd-title-text {
+    font-size: 16px;
+    color: white;
+}
+
+.wd-padding-left-2 {
+    padding-left: 2px;
+}
+
+.wd-padding-top-3 {
+    padding-top: 3px;
+}
+
+.wd-padding-top-10 {
+    padding-top: 10px;
+}
+
+.wd-padding-bottom-5 {
+    padding-bottom: 5px;
+}
+
+.wd-padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.wd-padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.wd-spot1 {
+    float: right;
+    padding-right: 20px;
+}
+
+
+.wd-logo-img {
+    float: left;
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.wd-checkmark-img {
+    width: 20px;
+    height: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* 4.1 Styling the explore screen E */
+.wd-float-left {
+    float: left;
+}
+
+.wd-image {
+    float: right;
+    border-radius: 16px;
+    width: 100px;
+    height: 100px;
+    margin-right: 16px;
+}
+
+.wd-text-white {
+    color: white;
+}
+
+.wd-text-darkgrey {
+    color: darkgrey;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-darkgrey {
+    background-color: grey;
+}
+
+.adjust-A {
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+.adjust-BC {
+    padding-left: 16px;
+}
+
