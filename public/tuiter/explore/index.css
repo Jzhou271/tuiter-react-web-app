@@ -21,13 +21,13 @@ input::placeholder {
 .wd-search-pic {
     position: absolute;
     left: 40px;
-    top: 30px;
+    top: 48px;
 }
 
 .wd-gear-pic {
     position: absolute;
     right: 12px;
-    top: 25px;
+    top: 45px;
     padding-right: 10px;
 }
 
