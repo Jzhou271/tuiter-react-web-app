@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+      <link href="vendors/boostrap/css/bootstrap.min.css" rel="stylesheet" />
+      <link href="index.css" rel="stylesheet" />
+
+      <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -27,26 +30,23 @@
     <title>React App</title>
   </head>
   <body>
-    <h1>Welcome to Web Dev CS5610 Spring 2023!</h1>
-    <h3>Course: WebDev CS5610</h3>
-    <h3>Name: Jing Zhou</h3>
-    <hr>
-    <h3>Assignments links:</h3>
-    <ul>
-        <li><a href="https://joyful-puffpuff-a9cbe2.netlify.app">Main Branch</a></li>
-    </ul>
-    <ul>
-        <li>A2 Branch - HTML</li>
-        <a href="https://a2--joyful-puffpuff-a9cbe2.netlify.app/labs/a2/index.html">lab a2</a><br/>
-        <a href="https://a2--joyful-puffpuff-a9cbe2.netlify.app/tuiter/navigation.html">Tuiter</a>
-    </ul>
-    <ul>
-        <li>A3 Branch - CSS</li>
-        <a href="https://a3--joyful-puffpuff-a9cbe2.netlify.app/labs/a3/index.html">lab a3</a><br/>
-        <a href="https://a3--joyful-puffpuff-a9cbe2.netlify.app/tuiter/navigation.html">Tuiter</a>
-    </ul>
-    <ul>
-        <li><a href="canvas/index.html">Canvas</a></li>
-    </ul>
+  <div class="container bg-warning">
+      <h1 id="welcome-title" class="font-size-2em color-blue">
+          Welcome to Web Dev CS5610 Spring 2023!
+      </h1>
+      <h3>Course: WebDev CS5610-06</h3>
+      <h3>Name: Jing Zhou</h3>
+      <hr>
+      <h3>Assignments links:</h3>
+      <ul id="table-of-content">
+          <li><a href="https://joyful-puffpuff-a9cbe2.netlify.app">Main Branch</a></li>
+          <li><a href="https://a2--joyful-puffpuff-a9cbe2.netlify.app/labs/a2/index.html">A2 Branch - HTML</a></li>
+          <li><a href="https://a3--joyful-puffpuff-a9cbe2.netlify.app/labs/a3/index.html">A3 Branch - CSS</a></li>
+          <li><a href="https://a4--joyful-puffpuff-a9cbe2.netlify.app/labs/a3/index.html">A4 Branch - Bootstrap</a></li>
+
+          <li><a href="tuiter/navigation.html">Tuiter</a></li>
+          <li><a href="canvas/index.html">Canvas</a></li>
+      </ul>
+  </div>
   </body>
 </html>
