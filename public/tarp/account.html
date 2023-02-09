@@ -1,44 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="../vendors/boostrap/css/bootstrap.min.css" rel="stylesheet" />
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+
+<div class="container">
     <a href="index.html">Back</a>
     <h1>Account</h1>
-    <label for="username">Name:</label>
-    <br>
+    <label for="username">Name:</label><br>
+
+    <div>
     <input
+            class="form-control"
             id="username"
             value="Jose Annunziato"
             placeholder="John Doe"
             title="Please enter your name"
+            type="text"
     />
-    <br/>
-    <label for="bio">Bio:</label>
-    <br/>
+    </div><br/>
+
+    <label for="email">Email</label>
+    <input
+            class="form-control"
+            id="email"
+            placeholder="alice@wonderland.com"
+            type="email"
+    /><br/>
+
+    Password: <br/>
+    <input
+            class="form-control"
+            type="password"
+    /><br/>
+
+    <label>Years teaching</label><br/>
+    <input
+            class="form-control"
+            type="number" min="1" max="80"
+    /><br/>
+
+    <label>Phone Number</label><br/>
+    <input
+            class="form-control"
+            type="tel"
+    /><br/>
+
+    <label>Date of Birth</label>
+    <input
+            class="form-control"
+            type="date"
+            value="2023-01-17"
+            min="2023-01-15"
+            max="2023-01-30"
+    /><br/>
+
+    <label for="bio">Bio:</label><br/>
     <textarea
+            class="form-control"
             placeholder="I like to.."
             id="bio"
             rows="10"
-            cols="20">Northeastern professor..</textarea>
-    <br/>
-    <label>Married:</label>
-    <br/>
-    <input id="Married-yes" type="radio" name="Married"/>
+            cols="20">Northeastern professor..</textarea><br/>
+
+    <label>Married:</label><br/>
+    <input
+            id="Married-yes" type="radio" name="Married"/>
     <label for="Married-yes">Yes</label>
     <label>
-    <input type="radio" name="Married"/>No
+    <input
+            type="radio" name="Married"/>No
     </label>
     <br/>
+
     <label>Marital Status</label>
     <select>
         <option value="MARRIED">Married</option>
         <option value="SINGLE">Single</option>
         <option value="WIDOW">Widow</option>
     </select>
-
     <br/>
     <label>Courses Teaching This Semester</label><br/>
     <label><input type="checkbox">CS4550</label><br/>
@@ -46,29 +89,70 @@
     <label><input type="checkbox">CS5500</label><br/>
     <label><input type="checkbox">CS5610</label><br/>
     <label><input type="checkbox">CS5700</label>
+    <br/>
 
-    <br/>
-    <label>Email</label>
-    <input type="email">
-    <br/>
-    <label>Years teaching</label>
-    <input type="number" min="1" max="80"/>
-    <br/>
-    <label>Phone Number</label>
-    <input type="tel">
-    <br/>
-    <label>Date of Birth</label>
-    <input
-            type="date"
-            value="2023-01-17"
-            min="2023-01-15"
-            max="2023-01-30"
-    />
-    <br/>
-    <button>Submit</button>
-    <button>Cancel</button>
+    <h3>Switches</h3>
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+        <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+        <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+    </div>
 
 
+    <h3>Responsive Forms</h3>
+    <form>
+        <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3">
+            </div>
+        </div>
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                        First radio
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <label class="form-check-label" for="gridRadios2">
+                        Second radio
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                    <label class="form-check-label" for="gridRadios3">
+                        Third disabled radio
+                    </label>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-danger">Cancel</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-success">Success</button>
+    </form>
+</div>
 
 </body>
 </html>
