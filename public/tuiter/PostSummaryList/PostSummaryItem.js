@@ -1,6 +1,6 @@
 const PostSummaryItem = (post) => {
   return (`
-    <a class="list-group-item ps-3 wd-height">
+    <a class="list-group-item ps-3" style="130px">
         <div class="row align-items-center">
             <div class="col">
                 <div class="text-muted">${post.topic}
@@ -12,6 +12,7 @@ const PostSummaryItem = (post) => {
                     <div class="wd-title-text">
                         ${post.title}
                     </div>
+                    <div class="text-muted">${post.tweets}</div>
                 </div>
             </div>
         </div>

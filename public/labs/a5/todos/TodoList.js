@@ -4,8 +4,7 @@ import todos from "./todos.js";
 const TodoList = () => {
   return(`
       <ul>
-         ${
-      todos.map(todo => {
+         ${todos.map(todo => {
         return(TodoItem(todo));
       }).join('')
   }
