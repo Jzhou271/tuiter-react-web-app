@@ -26,3 +26,4 @@ function Modules() {
         </ul>
     `)
 }
+export default Modules
