@@ -1,5 +1,6 @@
 import React from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import PostSummaryList from "../post-summary-list/index.js";
 
 const ExploreComponent = () => {
   return (
@@ -14,27 +15,27 @@ const ExploreComponent = () => {
         </div>
         <ul className="nav mb-2 nav-tabs">
           <li className="nav-item">
-            <a className="nav-link active" href="#">
+            <a className="nav-link active" href="#top">
               For you
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="#top">
               Trending
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="#top">
               News
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="#top">
               Sports
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link d-none d-md-block" href="#">
+            <a className="nav-link d-none d-md-block" href="#top">
               Entertainment
             </a>
           </li>
@@ -49,8 +50,8 @@ const ExploreComponent = () => {
             <h2 className="fw-bold ms-3 text-white">SpaceX's Starship</h2>
           </div>
         </div>
+        <PostSummaryList/>
       </div>
   );
 };
-
 export default ExploreComponent;
