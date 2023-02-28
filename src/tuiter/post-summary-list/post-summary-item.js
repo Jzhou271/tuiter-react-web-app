@@ -16,7 +16,7 @@ const PostSummaryItem = (
         <div className="row align-items-center">
           <div className="col">
             <div className="text-black">{posts.topic}
-              <img src={posts.image} className="mb-5 float-end" width="100"></img>
+              <img src={posts.image} alt="" className="mb-5 float-end" width="100"></img>
               <div className="fw-bold">{posts.userName}
                 <i className="ps-1 fa-solid fa-square-check"></i>
                 <span className="text-muted"> - {posts.time} </span>
