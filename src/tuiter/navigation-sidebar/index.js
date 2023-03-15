@@ -8,7 +8,7 @@ const NavigationSidebar = () => {
   const active = paths[2];
   return(
       <div className="list-group">
-        <Link to="/tuiter" className="list-group-item">
+        <Link to="" className="list-group-item">
           <i className="fa-brands fa-twitter me-2"></i>
           Tuiter
         </Link>
@@ -16,11 +16,11 @@ const NavigationSidebar = () => {
           <i className="fas fa-home me-2"></i>
           Home
         </Link>
-        <Link to="/tuiter/explore" className={`list-group-item ${active === 'explore'?'active':''}`}>
+          <Link to="/tuiter" className={`list-group-item ${active === 'explore'?'active':''}`}>
           <i className="fas fa-hashtag me-2"></i>
           Explore
         </Link>
-        <Link to="tuiter/notifications" className={`list-group-item ${active === 'notifications'?'active':''}`}>
+        <Link to="/tuiter/notifications" className={`list-group-item ${active === 'notifications'?'active':''}`}>
           <i className="fas fa-bell me-2"></i>
           Notifications
         </Link>
