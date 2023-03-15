@@ -29,7 +29,7 @@ const TuitsItem = (
       <li className="list-group-item">
         <div className="row">
           <div className="col-1">
-            <img className="rounded-pill" width="45px" src={post.image}/>
+            <img className="rounded-pill" alt="" width="45px" src={post.image}/>
           </div>
 
           <div className="col-11">
