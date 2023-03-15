@@ -14,12 +14,14 @@ const WhatsHappening = () => {
   return (
       <div className="row">
         <div className="col-auto">
-          <img src="/imgs/nasa.png" width={60}/>
+          <img src="/imgs/nasa.png" alt="" width={60}/>
         </div>
         <div className="col-10">
-<textarea value={whatsHappening} placeholder="What's happening?" className="form-control border-0"
-          onChange={(event) => setWhatsHappening(event.target.value)}>
-</textarea>
+          <textarea value={whatsHappening}
+                    placeholder="What's happening?"
+                    className="form-control border-0"
+                    onChange={(event) => setWhatsHappening(event.target.value)}>
+          </textarea>
           <div>
             <button className="rounded-pill btn btn-primary float-end mt-2 ps-3 pe-3 fw-bold" onClick={tuitClickHandler}>
               Tuit
