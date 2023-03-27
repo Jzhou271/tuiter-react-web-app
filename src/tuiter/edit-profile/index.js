@@ -1,116 +1,127 @@
-import React, {useState} from "react"
-import {useSelector, useDispatch} from "react-redux"
-import {Link} from "react-router-dom";
-import {changeProfile} from "../profile/profile-reducer";
+import React, {useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
+import "../profile/index.css"
+import {updateProfile} from "../profile/profile-reducer";
 
 
-const EditProfieComponent = () =>{
-  const profile = useSelector(state => state.profile)
-  const [person, setperson] = useState(profile);
-  // const inputdate = profile.dateJoined
-  // const [month, year] = inputdate.split("/")
-  const bioChangeHandler =(event) =>{
-    const bioValue = event.target.value;
-    const newPerson = {
-      ...person,
-      bio: bioValue
-    };
-    setperson(newPerson)
-  }
-  const nameChangeHandler=(event) =>{
-    // const name = event.target.value.split()
-    const firstName = event.target.value.split()[0]
-    const lastName = event.target.value.split()[1]
-    const newPerson ={
-      ...person,
-      firstName: firstName,
-      lastName: lastName,
-    };
-    setperson(newPerson)
-  }
-  const locationChangeHandler = (event) => {
-    const location = event.target.value
-    const newPerson ={
-      ...person,
-      location: location,
-    };
-    setperson(newPerson)
-  }
-  const webChangeHandler = (event) => {
-    const website = event.target.value
-    const newPerson ={
-      ...person,
-      website: website,
-    };
-    setperson(newPerson)
-  }
-
+const EditProfileComponent = () => {
   const dispatch = useDispatch();
-  const updatePersonHandler = () => {
-    dispatch(changeProfile(person))
+  const profile = useSelector((state => state.profile));
+  let[newProfile, setNewProfile] = useState(profile);
+  let[fullName, setFullName] = useState(`${newProfile.firstName} ${newProfile.lastName}`);
+  let[editing, setEditing] = useState(false);
+  let[birthDate, setBirthDate] = useState(newProfile.dateOfBirth);
+  const birthYear = (newProfile.dateOfBirth).split('/')[2];
+  let[newbirthYear, setNewBirthYear] = useState(birthYear);
+  let navigate = useNavigate();
+  const change= () => {
+    let path = `../profile`;
+    navigate(path);
   }
 
+  const saveProfile = () => {
+    const first = fullName.split(" ")[0].trim();
+    const last = fullName.split(" ")[1].trim();
+    const upDatedProfile = {
+      ...newProfile,
+      firstName:first,
+      lastName:last,
+      handle:`@${first}`,
+      dateOfBirth : birthDate
+    }
+    dispatch(updateProfile(upDatedProfile));
+    change();
+  }
 
-
-
-  return(
+  const dateChange = (value) => {
+    setBirthDate(value);
+    setEditing(false);
+    setNewBirthYear(value.split("-")[0]);
+  }
+  return (
       <div>
-          <div className ="d-flex">
-            <Link to ="/tuiter/profile">
-              <i className ="bi bi-x me-2" style={{fontSize: "1.5em"}}></i>
-            </Link>
-            <div className ="w-100 fw-bold" style={{ fontSize: "20px" }}>Edit Profile</div>
-            <Link  className ="float-right" to="/tuiter/profile">
-              <botton className ="btn btn-sm btn-dark
-                               rounded-pill  me-3 m-2"
-                      onClick={() => updatePersonHandler()}>
-                Save
-              </botton>
-            </Link>
+        <div>
+          <div className="mt-1 mb-2 row">
+            <div onClick={change}><i className="bi bi-x-lg"></i>
+              <span className="w-100 fw-bold p-5" style={{ fontSize: "20px" }}>Edit Profile</span>
+              <div className="float-end">
+                <button className="rounded-pill btn border float-end wd-font-13 btn-dark ps-3 pe-3 pt-1 pb-1" onClick={saveProfile}>
+                  Save
+                </button>
+              </div>
+            </div>
+
           </div>
-        <div className="">
-        <img src ={`/tuiter/res/img/${profile.bannerPicture}`} alt="" style={{ width: "100%" }} />
-        <img src ={`/tuiter/res/img/${profile.profilePicture}`} alt="" className="rounded-pill wd-profile" style={{ width: "20%", height: "20%" }}></img>
-        </div>
-          <div className="border-1">
-            <label for ="name" style ={{position:"relative", top:"25px", left:"14px"}}>Name:</label>
-            <textarea id ="name"
-                      placeholder ={profile.firstName +" " + profile.lastName}
-                      className ="form-control pt-4"
-                      rows="1"
-                      onChange={nameChangeHandler}>
-            </textarea>
+          <div>
+            <img src ={`/tuiter/res/img/${profile.bannerPicture}`}
+                 alt=""
+                 style={{ width: "100%" }} />
+            <img src ={`/tuiter/res/img/${profile.profilePicture}`}
+                 alt="" className="rounded-pill wd-profile"
+                 style={{ width: "20%", height: "20%" }}></img>
           </div>
+
           <div className="border-1">
-            <label for ="bio" style={{position: "relative", top: "25px", left: "14px"}}>Bio:</label>
+          <label htmlFor="name" className="text-muted wd-position">Name</label>
+            <input id="name"
+                   onChange={(e) => setFullName(e.target.value)}
+                   className="form-control pt-4"
+                   value={fullName}/>
+
+            <label htmlFor="bio" className="text-muted wd-position">Bio</label>
             <textarea id="bio"
-                      placeholder={profile.bio}
-                      className="form-control pt-4"
+                      onChange={(e) => setNewProfile({
+                        ...newProfile,
+                        bio: e.target.value,
+                      })}
+                      value={newProfile.bio}
                       rows="3"
-                      onChange={bioChangeHandler}>
+                      className="form-control pt-4">
             </textarea>
-          </div>
-          <div className="border-1">
-            <label for="location" style={{position: "relative", top: "25px", left: "14px"}}>Location:</label>
+
+            <label htmlFor="location" className="text-muted wd-position">Location</label>
             <textarea id="location"
-                      placeholder={profile.location}
-                      className="form-control pt-4"
+                      onChange={(e) => setNewProfile({
+                        ...newProfile,
+                        location : e.target.value,
+                      })}
+                      value={newProfile.location}
                       rows="1"
-                      onChange={locationChangeHandler}>
+                      className="form-control pt-4">
             </textarea>
-          </div>
-          <div className="border-1">
-            <label for="web" style={{position: "relative", top: "25px", left: "14px"}}>Website:</label>
-            <textarea id="web"
-                      placeholder={profile.website}
-                      className="form-control pt-4"
+
+            <label htmlFor="website" className="text-muted wd-position">Website</label>
+            <textarea id = "website"
+                      onChange={(e) => setNewProfile({
+                        ...newProfile,
+                        website : e.target.value,
+                      })}
+                      value={newProfile.website}
                       rows="1"
-                      onChange={webChangeHandler}>
+                      className="form-control pt-4">
             </textarea>
+
+            <div className="mt-4">
+              <label className="text-muted" htmlFor="birth">Birth date</label>
+              ·
+              <span className="text-primary" onClick={(e) => setEditing(true)}>Edit</span>
+              <div>
+                {editing ? <input onChange={(e) => dateChange(e.target.value)}
+                                  type="date"
+                                  value={birthDate}/>
+                    : <span className="bg-black">{profile.dateOfBirth}</span>
+                }
+                <span>{newbirthYear}</span>
+              </div>
+            </div>
+            <div className="mt-3">
+              <span>Switch to professional</span>
+              <span className="float-end"><i className="fa-solid fa-greater-than"></i></span>
+            </div>
           </div>
-
-
+        </div>
       </div>
   )
-}
-export default EditProfieComponent;
+};
+export default EditProfileComponent;
