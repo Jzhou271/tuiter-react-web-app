@@ -20,7 +20,7 @@ const ProfileComponent = () =>{
           <div className="text-muted">6,114 Tweets</div>
         </div>
         <div>
-          <div className="">
+          <div>
           <img src={`${profile.bannerPicture}`}
                alt=""
                style={{ width: "100%" }} />

@@ -5,7 +5,7 @@ const profileSlice = createSlice({
   name: 'profile',
   initialState: profile,
   reducers: {
-    changeProfile(state, action) {
+    updateProfile(state, action) {
       state.bio = action.payload.bio
       state.firstName = action.payload.firstName
       state.lastName = action.payload.lastName
@@ -15,4 +15,4 @@ const profileSlice = createSlice({
   }
 });
 export default profileSlice.reducer
-export const{changeProfile} = profileSlice.actions
+export const{updateProfile} = profileSlice.actions

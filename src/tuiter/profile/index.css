@@ -3,3 +3,9 @@
     top:-60px;
     left: 25px;
 }
+
+.wd-position {
+    position: relative;
+    top : 25px;
+    left : 12px;
+}
