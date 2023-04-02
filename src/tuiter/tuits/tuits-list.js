@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {useSelector, useDispatch} from "react-redux";
-import TuitItem from "./tuits-item.js";
-import TuitStats from "./tuit-stats.js";
+import TuitItem from "./tuits-item";
+import TuitStats from "./tuit-stats";
 import {findTuitsThunk} from "../../services/tuits-thunks";
 
 const TuitList =() =>{
@@ -10,7 +10,7 @@ const TuitList =() =>{
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(findTuitsThunk())
-  }, [])
+  }, [dispatch])
   return(
       <ul className="list-group">
         {
@@ -22,14 +22,13 @@ const TuitList =() =>{
         {
           tuits.map(details =>
               <div  className="list-group-item ">
-                <TuitItem key={
-                  new Date().getTime()}
-                          post={details}/>
-                <TuitStats post={details}/>
+                <TuitItem  　key = {new Date().getTime()}  post={details}/>
+                <TuitStats  post={details}/>
               </div>
           )
         }
       </ul>
   );
 };
+
 export default TuitList

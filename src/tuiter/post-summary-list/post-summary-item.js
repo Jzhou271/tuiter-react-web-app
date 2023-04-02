@@ -1,10 +1,6 @@
 import React from "react";
 
-const PostSummaryItem = (
-    {
-      posts
-    }
-) => {
+const PostSummaryItem = ({posts}) => {
   return(
       <li className="list-group-item ps-3">
         <div className="row align-items-center">
