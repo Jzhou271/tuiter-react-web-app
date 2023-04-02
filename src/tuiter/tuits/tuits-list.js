@@ -25,8 +25,7 @@ const TuitList =() =>{
                 <TuitItem  　key = {new Date().getTime()}  post={details}/>
                 <TuitStats  post={details}/>
               </div>
-          )
-        }
+          )}
       </ul>
   );
 };
