@@ -8,7 +8,14 @@ const WhatsHappening = () => {
   const dispatch = useDispatch();
   const tuitClickHandler = () => {
     const newTuit = {
-      tuit: whatsHappening
+      tuit: whatsHappening,
+      username: "Username",
+      handle: "@username",
+      image: "yoyo1.jpg",
+      replies: 0,
+      retuits: 0,
+      dislikes: 0,
+      likes: 0,
     }
     dispatch(createTuitThunk(newTuit));
   }
@@ -17,7 +24,7 @@ const WhatsHappening = () => {
         <div className="col-auto">
           <img src="/imgs/nasa.png" alt="" width={60}/>
         </div>
-        <div className="col-10">
+        <div className="col-10 mb-4">
           <textarea value={whatsHappening}
                     placeholder="What's happening?"
                     className="form-control border-0"
@@ -37,7 +44,6 @@ const WhatsHappening = () => {
             </div>
           </div>
         </div>
-        <div className="col-12"><hr/></div>
       </div>
   );
 }
